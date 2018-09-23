@@ -1,0 +1,107 @@
+
+** Modelo de CV responsivo - Luis Aparisi Hermoso 			[ SPANISH ]
+
+	
+____________________________________________________________________________
+
+Resumen: Desarrollo de un CV basado en un modelo "Responsive Holy Grail", utilizando
+	 html5 y css grid fundamentalmente. Adicionalmente, se recurre a Javascript
+	 para realizar determinadas operaciones de validación y animación.
+
+__________________________________________________________________________________
+
+Keywords: responsive CV template html5 css3 grid javascript
+__________________________________________________________________________________
+
+
+*Estructura del contenido (siguiendo las especificaciones indicadas): 
+
+	El modelo de CV desarrollado consta de dos archivos html.
+
+	1) index.html > Página principal, que incluye las siguientes temáticas:
+
+		> Quien soy, 
+		> Estudios y
+		> Experiencia. 
+
+	Adicionalmente, se incluyen otros tres apartados o secciones, que incluyen:
+	
+ 		> Habilidades, 
+		> Datos de contacto,
+		> Redes sociales y
+		> Hobbies.		
+
+	2) contact.html > Formulario de contacto.
+
+	
+
+*Elementos de diseño - animaciones  
+
+	1) index.html	>	Se ha utilizado la funcionalidad Css grid, junto con animaciones
+				css - zoom, rotate, etc., además de incluir media queries para
+ 				conseguir un diseño responsivo.   
+
+
+	2) contact.html	>	Formulario de contacto responsivo. 
+
+	
+	Los elementos de diseño, como las animaciones y media queries, se encuentran en dos archivos css:
+	
+	* style.css	>> Incluye todos los elementos de diseño y animaciones de index.html.
+
+	* contact.css	>> Lo mismo sucede con contact.html. 
+
+
+*Javascript:
+
+
+	1)index.html	>	Utiliza javascript para crear animaciones de texto y un slider de imágenes.
+				En ambos casos se utilizan arrays que contienen el texto o la dirección 
+				de las imágenes, y con setInterval se llama a una función recursiva, de forma
+				que se crea un loop infinito, para poder ver indefinidamente los fragmentos 
+				de texto, o las imágenes incorporadas.
+				
+				Para acceder al código ir a la carpeta javascript > index.js
+
+
+	2)contact.html	>	Emplea javascript para validar datos con regex, de forma que hasta que no 
+				se cumplen debidamente los criterios de validación no se permite enviar
+				el mensaje. 
+				También se utiliza para contar palabras online, pudiendo ver las que restan
+		 		para poder terminar el mensaje, mostrándose en color rojo si quedan menos de
+				un 15%. Y finalmente, envía un alert comunicando que has superado 
+				el límite de 150 palabras.
+				
+				Si se escoge la última opción del campo selección, de inmediato se incluye en el DOM 
+				un input textarea para poder facilitar más detalles respecto a la opción - Otros.
+				Para ello se recurre a document fragment que es una buena opción para incluir o
+				agregar elementos, dado que aunque es un nodo del DOM no forma parte del DOM tree,
+ 				es generado en memoria, y por tanto no causa reflow, y con su uso mejora el
+ 				rendimiento.	
+
+				Para acceder al código ir a la carpeta javascript > contact.js
+
+********************************************************************************************************************
+Credits and mentions:	NOT FOR COMMERCIAL USE. 
+			IMAGES MAY BE SUBJECT TO COPYRIGHT.
+			IMAGES ARE USE ONLY FOR EDUCATIONAL PURPOSES.
+			
+			OTHERWISE: Feel free to copy, paste, modify, erase, distribute and use
+			the code as you wish.
+
+			- Stay hungry stay foolish. -
+
+			If you consider that this work has - somehow - been helpful or
+			useful, just drop a line and add my name in your credits and mentions, 								or just refer to it with a link to Github.
+
+			THX and have a nice day!
+			
+		
+	Contact info: 	digital.66route@gmail.com - Luis 				
+
+********************************************************************************************************************
+
+
+
+
+
