@@ -201,6 +201,15 @@ form .submit:hover{
   color:#fff;  
 }
 
+.sidebarMenuInner span:hover:before{
+  content:'[';
+  color: #fff; 
+}
+.sidebarMenuInner span:hover:after{
+  content:']';
+  color: #fff; 
+}
+
 input[type="checkbox"]:checked ~ #sidebarMenu { transform: translateX(0); } 
 
 input[type=checkbox] {
@@ -385,15 +394,13 @@ span#contact-anim h1 {
                     border-radius: 1rem;
                     text-transform: uppercase;
                     font-size: 1rem;
-                    color: #000; 
+                    color: #B6D500; 
                     font-weight: 600;
                     background-color:transparent;
                     align-items: center;
                   }
                   
-                  .sidebarMenuInner span:hover{
-                    color: #B6D500;
-                  }
+            
                  
                   input[type="checkbox"]:checked ~ #sidebarMenu { transform: translateX(0); } 
 

@@ -825,7 +825,7 @@ y usabilidad en cada caso.
 
 /* Media queries:  
   
-  3 medidas y la estructura de contenedores correspondiente.
+  4 medidas y la estructura de contenedores correspondiente.
   
   1 - Por defecto: @media only screen and (max-width: 767px): 
       
@@ -840,7 +840,10 @@ y usabilidad en cada caso.
 
       Abarca desde pantallas de equipos sobremesa, portátiles, y tablets/Ipads 
       de última generación. 
-     
+  4 - @media only screen and (min-width: 1225px)
+      
+      Se establece para pantallas de gran tamaño/resolución.
+
 */
 
 
