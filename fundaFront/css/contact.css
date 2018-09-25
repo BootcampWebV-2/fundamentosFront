@@ -1,0 +1,535 @@
+/*Modelo de CV responsive basado en css grid
+      Más información en readme.txt
+*/
+
+:root {
+    --color-texto: #fff;
+  
+    --color-boton: #fff;
+
+}
+
+
+
+body {
+
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	background: linear-gradient(rgba(66,133,100,0.2),rgba(33,250,255,0.2)),url(../images/contact.jpg);
+	background-size: center;
+	/*    background-position: center;    #F8662B */. 
+	color: var(--color-texto);
+	font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+div{
+  background-position: center;
+
+}
+
+
+.contact-title {
+	margin-top: 10%;
+	color:#fff;
+	padding-left: 17%;
+	text-align: center;
+	padding-right: 17%;
+
+}
+
+
+form {
+	margin-top:50px;
+}	
+
+
+/* Placeholder config   */
+
+.form-control::placeholder, ::placeholder  { /* Chrome, Firefox, Opera, Safari 10.1+ ...  modern browser */
+    color: #fff;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {       /* FF 4-18 */
+  color: #fff;
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder {      /* FF 19+ */
+  color: #fff;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {   /* IE 10+ */
+  color: #fff;
+}
+
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder  { /* Microsoft Edge */
+    color: #fff;
+}
+
+.form-control{
+	width:65%;
+	background-color: transparent;
+	outline: none;
+	border: 1px solid white;
+	border-radius: 5px;
+	color: white; 
+	font-size: 18px;
+	margin-bottom: 16px;
+	
+}
+
+
+#input-msg{
+
+  width:65%;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-bottom: 0px;
+}
+
+
+#remainingW {
+  margin-left:17%; 
+  width:65%;
+  
+  text-align: right;
+  color:white;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 5px;
+  margin-bottom: 16px;
+}
+
+label {
+	display: inline-block left;
+	font-size: 18px;
+	padding: 7px;	
+  color:white;
+}
+
+input{
+	height: 30px;
+
+}
+/*Send button*/
+
+form .submit {
+	background: transparent;
+  /*border-width: 1px;
+	border-radius: 12px;
+	border-color: white;*/
+  border-radius: 1rem solid white;
+	font-size: 18px;
+	height: 60px;
+	width: 220px;
+	color: white;
+	letter-spacing: 2px;
+	margin-top: 20px;
+}
+
+/* Al pasar por encima del boton hace una transición ->  transition: all 0.3s ease-out;    */
+form .submit:hover{
+	cursor:pointer; 
+	background: #B6D500;
+  color:white;
+  font-size: 22px;
+  border-radius: 1rem solid white;
+  border: solid 0.5rem white;
+  border-spacing:  
+  transition: all 0.3s ease-out; 
+  padding
+}
+
+/********  Menú móvil ******* */     
+
+#sidebarMenu {
+  height: 150px;
+  position: fixed; 
+  left: 0;
+  width: 150px;
+  margin-top: 60px;
+  transform: translateX(-250px);
+  transition: transform 250ms ease-in-out;
+  background: transparent;   
+} 
+
+.sidebarMenuInner {
+  margin-top:1rem;
+  padding: 0;
+  border-top:transparent;
+}
+.sidebarMenuInner li {
+    display: inline-block; 
+    align-content: left;
+    list-style: none;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 15px;
+    text-align: left;
+
+}
+#sidebarMenu ul{
+    text-align:left;
+}
+
+.sidebarMenuInner span{
+  display: inline;
+  padding-top:0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left:0.5rem;
+  padding-right: 0.5rem; 
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  color: #B6D500; 
+  text-align: left;
+  /* border-radius: 5px; */
+  background-color:#404040; 
+}
+
+.sidebarMenuInner span:hover{
+  color:#fff;  
+}
+
+input[type="checkbox"]:checked ~ #sidebarMenu { transform: translateX(0); } 
+
+input[type=checkbox] {
+  transition: all 0.333s;
+  box-sizing: border-box;
+  display: none;
+ 
+}
+
+
+
+.sidebarIconToggle {
+  transition: all 0.333s;
+  box-sizing: border-box;
+  cursor:pointer;
+  position: absolute; /* absolute  */
+  z-index: 99;
+  height: 100%;
+  width: 100%;
+  top: 30px;
+  left: 30px;
+  height: 35px;
+  width: 35px;
+}
+
+.spinner {
+  transition: all 0.333s;
+  box-sizing: border-box;
+  position: absolute; /* absolute */
+  height: 4px;
+  width: 100%;
+  background-color:#B6CE2C;  /* B0C60A ; */
+}
+
+.horizontal {
+  transition: all 0.333s;
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  margin-top: 4px;
+}
+.horizontal:hover {
+    transition: all;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 4px;
+    width: 70%;
+    background-color:#fff;
+}
+
+.diagonal.part-1 {
+  transition: all 0.333s;
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  margin-top: 4px;
+}
+
+
+
+.diagonal.part-2 {
+  transition: all 0.333s;
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  margin-top: 4px;
+}
+
+
+input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+  transition: all 0.333s;
+  box-sizing: border-box;
+  opacity: 0;
+}
+
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+  transition: all 0.333s;
+  box-sizing: border-box;
+  transform: rotate(135deg);
+  margin-top: 8px;
+}
+
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+  transition: all 0.333s;
+  box-sizing: border-box;
+  transform: rotate(-135deg);
+  margin-top: -9px;
+}
+
+
+
+/* fullRotaten ~ speed 33rpm (1.81 sec/fullRotation)  */
+
+
+span#contact-anim h1 {
+    font-size: 32px;
+    margin-bottom: 10px; 
+    display: inline-block;
+    text-transform: uppercase;
+    animation: fullRotaten 1.81s ;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fullRotaten {      
+    
+    
+    from {
+      transform: perspective(320px) rotateY(0deg);
+      
+    }
+
+    to {
+      transform: perspective(320px) rotateY(360deg);
+      
+    }
+}
+
+
+/*  Media queries: .*/
+  
+@media only screen and (min-width: 768px)   {
+
+
+	body {
+		background-size: cover;
+	
+	}
+	
+                  /********  Menú móvil ******* */     
+
+    
+                #sidebar>#sidebarMenu span, span nav, span nav ul{
+                    background-color: transparent;  
+    
+                }
+
+                  #sidebarMenu {
+                    height: 35px;
+                    position: fixed; 
+                    left: 0;
+                    width: 73vw;
+                    margin-top: -10.33vh;
+                    margin-left: 15vw;
+                    transform: translateX(-1500px);
+                    transition: transform 250ms ease-in-out;
+                    
+                  } 
+                  #sidebarMenu ul{
+                    text-align:center;
+                  }
+
+                  .sidebarMenuInner {
+                    width: 75vw;
+                    border-top:2px solid #404040;
+                    border-top-right-radius: 1rem;
+                    border-top-left-radius: 1rem;
+                    border-bottom-right-radius:1rem;
+                    border-bottom-left-radius: 1rem;
+                    border-bottom:3px solid #c5cdff;
+                    background-color: transparent;
+                  }
+        
+                  .sidebarMenuInner li {
+                    display: inline-block; 
+                    list-style: none;
+                    text-decoration: none;
+                  
+                  /*background-color: #404040; color: #F8662B; width: 610px; */  
+                    cursor: pointer;
+                    padding: 0.5rem;/* 15px */
+                  
+                  /* border-radius: 0.5px; 15px  background-color:#404040; */
+                  }
+              
+                  
+                  .sidebarMenuInner span{
+                    display: inline;
+                    padding-top:0.5rem;
+                    padding-bottom: 0.5rem;
+                    padding-left:1rem;
+                    border-radius: 1rem;
+                    text-transform: uppercase;
+                    font-size: 1rem;
+                    color: #000; 
+                    font-weight: 600;
+                    background-color:transparent;
+                    align-items: center;
+                  }
+                  
+                  .sidebarMenuInner span:hover{
+                    color: #B6D500;
+                  }
+                 
+                  input[type="checkbox"]:checked ~ #sidebarMenu { transform: translateX(0); } 
+
+                  input[type=checkbox] {
+                    transition: all 0.333s;
+                    box-sizing: border-box;
+                    display: none;
+                   
+                  }
+
+                  /*  sidebarIconToggle es el icon móvil y es un elemento label que depende del input checkbox.
+                      
+                      */
+
+
+                  .sidebarIconToggle {
+                    transition: all 0.333s;  /*. display: inline-block; */
+                    box-sizing: border-box;
+                    cursor:pointer;
+                    position: absolute; /* absolute   */
+                    z-index: 99;
+                    height: 100%;
+                    width: 100%;
+                    top: 6.6vh;
+                    left: 3vw;
+                    height: 40px;
+                    width: 40px;
+                    /*top: 30px;
+                    left: 30px;
+                    height: 35px;
+                    width: 35px;*/
+                  }
+
+                  .horizontal {
+                    transition: all 0.333s;
+                    box-sizing: border-box;
+                    position: relative;
+                    float: left;
+                    margin-top: 4px;
+                  }
+                  .horizontal:hover {
+                      transition: all;
+                      box-sizing: border-box;
+                      position: relative;
+                      float: left;
+                      margin-top: 4px;
+                      width: 60%;
+                      background-color:#fff;
+                  }
+
+                  .diagonal.part-1 {
+                    transition: all 0.333s;
+                    box-sizing: border-box;
+                    position: relative;
+                    float: left;
+                  }
+
+                  .diagonal.part-2 {
+                    transition: all 0.333s;
+                    box-sizing: border-box;
+                    position: relative;
+                    float: left;
+                    margin-top: 4px;
+                  }
+
+
+
+                  input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+                    transition: all 0.333s;
+                    box-sizing: border-box;
+                    opacity: 0;
+                  }
+
+                  input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+                    transition: all 0.333s;
+                    box-sizing: border-box;
+                    transform: rotate(135deg);
+                    margin-top: 8px;
+                  }
+
+                  input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+                    transition: all 0.333s;
+                    box-sizing: border-box;
+                    transform: rotate(-135deg);
+                    margin-top: -9px;
+                  }
+
+
+
+}
+
+@media only screen and (min-width: 1225px)   {
+
+      body {
+    background-size: cover;
+  
+  }  
+            /*    Menu
+            */
+                 #sidebarMenu {  
+                    height: 35px;
+                    position: fixed; 
+                    left: 0;
+                    width: 70vw;
+                    margin-top: -15vh;
+                    margin-left: 15vw;
+                    transform: translateX(-2200px);
+                    transition: transform 250ms ease-in-out;
+                    
+                  } 
+                  #sidebarMenu ul{
+                    text-align:center;
+                  }
+
+                  
+            
+
+
+                  .sidebarIconToggle {
+                    transition: all 0.333s;  /*. display: inline-block; */
+                    box-sizing: border-box;
+                    cursor:pointer;
+                    position: absolute; /* absolute   */
+                    z-index: 99;
+                    height: 100%;
+                    width: 100%;
+                    top: 6.6vh;
+                    left: 3vw;
+                    height: 40px;
+                    width: 40px;
+                  }
+
+                  
+
+}      
+
+
+
+

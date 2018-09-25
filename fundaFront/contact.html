@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<!--  --> 
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Luis Aparisi Hermoso">
+    <meta name="description" content="Modelo CV html5 css3 javascript grid">
+    <title>Formulario de contacto</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/contact.css">
+   
+
+</head>
+<body>
+	
+	
+			
+	<header id="sidebar" class="box header0"> 
+        
+        <input type="checkbox" id="openSidebarMenu">
+        <label for="openSidebarMenu" class="sidebarIconToggle">
+            <div class="spinner diagonal part-1"></div>
+            <div class="spinner horizontal"></div>
+            <div class="spinner diagonal part-2"></div>
+        </label>
+        
+        <div id="sidebarMenu">
+            <nav id="top-menu" class="menu-top">
+            <ul class="sidebarMenuInner">
+                <li><a href="./index.html#who"><span >Quién</span></a></li>
+                                                        
+                <li><a href="./index.html#studies"><span >Estudios</span></a></li>
+            
+                <li><a href="./index.html#experience"><span >Experiencia</span></a></li>
+            
+                <li><a href="#contact.html"><span>Contacto</span></a></li>
+    
+            </ul>
+            </nav>
+        
+        </div>
+        
+
+    </header>
+		
+
+
+	<div id="contact" class="contact-title">
+		<span id="contact-anim">
+			<h1>Contactar</h1>
+		</span>
+			
+		<span>	
+			<h4>Para ponerse en contacto rellenar los datos solicitados en el formulario adjunto</h4>
+		</span>
+	</div>
+
+
+
+	<div>
+		
+		<form id="contact-form" method="post" action="" class="box">
+
+
+				<label for="name" id="name-label" class="form-control2">Nombre</label><br>
+				<input type="text" name="name" id="input-name" class="form-control" placeholder="Nombre" required>
+				<br>
+			
+				<label for="email" id="email-label" class="form-control2">Email</label><br>
+				<input type="text" name="email" id="input-email" class="form-control" placeholder="Email" required>
+				<br>
+				
+				<label for="phone" id="phone-label" class="form-control2">Móvil</label><br>
+				<input type="text" name="phone" id="input-phone" class="form-control" placeholder="Móvil" required>
+				<br>
+				
+				<label for="name" id="msg-label" class="form-control2">Mensaje</label><br>
+				<textarea name="message" id="input-msg" class="form-control" placeholder="Mensaje" rows="4" required></textarea>
+				<div id="remainingW">150 palabras</div>
+				<br>
+
+				
+				<label for="selection" id="select-label" class="form-control2">¿Cómo me has conocido?</label><br>
+                <select name="selection" id="input-select" class="form-control" required>
+            	    <option value="0"> -- Elegir Opción --</option>
+                	<option value="1">Empresa de selección</option>
+                	<option value="2">LinkedIn</option>
+                	<option value="3">KeepCoding</option>
+                	<option value="4">Otros</option>
+
+
+                </select>
+				<br>
+				
+
+				<div class="form-control2" id="newText">
+				
+				</div>
+				<input type="submit" id="btn" class="form-control submit" value="Enviar Mensaje">
+
+
+		</form>
+
+	</div>
+
+
+<script src="javascript/contact.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
